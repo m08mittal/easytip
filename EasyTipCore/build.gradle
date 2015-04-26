@@ -1,0 +1,24 @@
+apply plugin: "java"
+apply plugin: "maven"
+apply plugin : 'eclipse'
+
+group = "myorg"
+version = 1.0
+
+repositories {
+    mavenCentral()
+}
+
+def springVersion = "3.0.5.RELEASE"
+def hibVersion = "4.0.0.Final"
+
+dependencies {
+    compile 'commons-codec:commons-codec:1.5'
+    
+    compile "org.springframework:spring-core:$springVersion",            
+        "org.springframework:spring-orm:$springVersion",
+        "org.hibernate:hibernate-core:$hibVersion",
+        "org.hibernate:hibernate-entitymanager:$hibVersion",
+        "org.springframework.data:spring-data-jpa:1.0.3.RELEASE",
+	"org.hsqldb:hsqldb:2.2.4"
+}
